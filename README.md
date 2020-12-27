@@ -32,7 +32,7 @@ automatic-raga-recognition/
 
 ```
 
-**Note:** The `original-project-implementation` directory contains the code for the original implementation during the IE643 course-project. This code has since been cleaned up and refactored. This code has been included only to provide credibility to the claims in `report.pdf`. 
+**Note:** The `original-project-implementation` directory contains the code for the original implementation during the IE643 course-project. This code has since been cleaned up and refactored. It has been included only to provide credibility to the claims in `report.pdf`. 
 
 ***
 <p align='center'>Created with :heart: by <a href="https://www.linkedin.com/in/lohiya-shubham/">Shubham Lohiya</a> & <a href="https://www.linkedin.com/in/swarada-bharadwaj-5145a1174/">Swarada Bharadwaj</a></p>
