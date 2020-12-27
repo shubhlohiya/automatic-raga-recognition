@@ -1,4 +1,5 @@
 import torch.nn as nn
+from attention_layer import Attention
 
 class DeepSRGM(nn.Module):
     def __init__(self, rnn="lstm", input_length=5000, embedding_size=128, hidden_size=768,
@@ -13,7 +14,7 @@ class DeepSRGM(nn.Module):
         :param drop_prob:
         """
 
-        super(Model, self).__init__()
+        super(DeepSRGM, self).__init__()
         self.num_layers = num_layers
         self.hidden_size = hidden_size
         self.fc1 = nn.Linear(hidden_size, 384)
