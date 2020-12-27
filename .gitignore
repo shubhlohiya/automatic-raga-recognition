@@ -1,3 +1,7 @@
 **/__pycache__/
 .idea/
 **/.ipynb_checkpoints/
+data/X_test.npy
+data/X_train.npy
+data/Y_test.npy
+data/Y_train.npy
