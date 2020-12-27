@@ -2,7 +2,7 @@
 
 Dataset and features are available [here](https://drive.google.com/drive/folders/0Bz-I9QJ1cL6aTG93WDgycXhsN1U?usp=sharing "Raga Datasets").
 
-Further Preprocessing to get tonic normalized random subsequences to form the final dataset, can be done using the code in [this](../src/data_preprocessing.ipynb "Notebook for Data Preprocessing") notebook.
+Further Preprocessing to get tonic normalized random subsequences to form the final dataset, can be done using the code in [this](../src/dataset_preprocessing.ipynb "Notebook for Data Preprocessing") notebook.
 
 
 Preprocessed training and test sets as numpy arrays can be accessed using these links:  
