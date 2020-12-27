@@ -5,6 +5,7 @@ class DeepSRGM(nn.Module):
     def __init__(self, rnn="lstm", input_length=5000, embedding_size=128, hidden_size=768,
                  num_layers=1, num_classes=10, vocab_size=209, drop_prob=0.3):
         """
+        :param rnn: indicates whether to use an LSTM or a GRU
         :param input_length: length of input subsequence
         :param embedding_size: dim of the embedding for each element in input
         :param hidden_size: number of features in the hidden state of LSTM
@@ -16,11 +17,7 @@ class DeepSRGM(nn.Module):
 
         super(DeepSRGM, self).__init__()
         self.num_layers = num_layers
-        self.hidden_size = hidden_size
-        self.fc1 = nn.Linear(hidden_size, 384)
-        self.fc2 = nn.Linear(384, num_classes)
-        # self.batchNorm1d = nn.BatchNorm1d(input_length)
-        self.dropout = nn.Dropout(drop_prob)
+        self.hidden_size = hidden_size        
 
         if rnn=="lstm":
             self.rnn = nn.LSTM(embedding_size, hidden_size, num_layers,
@@ -31,6 +28,12 @@ class DeepSRGM(nn.Module):
 
         self.embeddings = nn.Embedding(vocab_size, embedding_size)
         self.attention_layer = Attention(hidden_size, input_length)
+
+        self.fc1 = nn.Linear(hidden_size, 384)
+        self.fc2 = nn.Linear(384, num_classes)
+        
+        # self.batchNorm1d = nn.BatchNorm1d(input_length)
+        self.dropout = nn.Dropout(drop_prob)
         self.relu = nn.ReLU()
 
     def forward(self, x):
