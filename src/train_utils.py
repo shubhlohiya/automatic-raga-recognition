@@ -15,14 +15,15 @@ def get_trainloader(X_train, Y_train, batch_size = 40):
 
     return trainloader
 
-def trainer(trainloader, model, optimizer, criterion, epochs, device=device):
+def trainer(trainloader, model, optimizer, criterion, epochs, device=device, modeltype="lstm"):
     """
-
     :param trainloader: Dataloader Object
     :param model: instance of our deep learning model
     :param optimizer: optimizer to be used to update weights
     :param criterion: loss function to be used
     :param epochs: number of epochs to train for
+    :param device: specifies which device to use
+    :param modeltype: specified "lstm" or "gru" for checkpoint saving
     :return: losslist of average losses per epoch
     """
     model.train()
@@ -56,7 +57,7 @@ def trainer(trainloader, model, optimizer, criterion, epochs, device=device):
         print(f"EPOCH {epoch+1} OVERALL LOSS: {losslist[-1]:.3f}")
         print("=" * 50)
         if epoch % 5 == 4:
-            path = f"../models/lstm_{epoch+1}_checkpoint.pth"
+            path = f"../models/{modeltype}_{epoch+1}_checkpoint.pth"
             print(f"Saving model weights at Epoch {epoch+1} ...")
             torch.save(model.state_dict(), path)
 
