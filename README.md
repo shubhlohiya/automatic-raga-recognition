@@ -6,7 +6,7 @@ This was done as a part of the course project of **IE 643 - Deep Learning: Theor
 
 The details about the project, previous work, our contributions, and our results can be found in the [report](./report.pdf).  
 
-Repository Structure:
+**Repository Structure:**
 ```
 automatic-raga-recognition/
 ├── README.md
