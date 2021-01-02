@@ -4,7 +4,7 @@ This repository contains the unofficial implementation of the [DeepSRGM](https:/
 
 This was done as a part of the course project of **IE 643 - Deep Learning: Theory and Practice**, under Prof. P. Balamurugan.  
 
-The details about the project, previous work, our contributions, and our results can be found in the [report](./report.pdf).  
+The details about the project, previous work, our contributions, and our results can be found in the [report](./report.pdf). The detailed summaries and trained weights of our models can be found [here](./models).  
 
 **Repository Structure:**
 ```
